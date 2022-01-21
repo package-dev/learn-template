@@ -1,4 +1,5 @@
-# rn-base-template
+# learn-template
  
 ## usage
-npx react-native init SomeApp --template https://github.com/phankietit/rn-base-template.git
+npx react-native init SomeApp --template https://github.com/phamha98/learn-template
+.git
