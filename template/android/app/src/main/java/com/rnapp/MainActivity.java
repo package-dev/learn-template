@@ -1,4 +1,4 @@
-package com.rnapp;
+package com.ProjectName;
 
 import com.facebook.react.ReactActivity;
 
@@ -12,7 +12,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "rnapp";
+    return "ProjectName";
   }
   @Override //react-native-splash-screeen
   protected void onCreate(Bundle savedInstanceState) {
