@@ -1,0 +1,8 @@
+{
+  "name": "rn-base-template",
+  "version": "0.0.1",
+  "repository": "https://github.com/phankietit/rn-base-template.git",
+  "description": "React Native Base Template",
+  "author": "Phan Kiet - Phuoc An",
+  "license": "MIT"
+}

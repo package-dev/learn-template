@@ -1,0 +1,6 @@
+{
+    "authenticated": {
+        "register": "Register",
+        "login": "Login"
+    }
+}
