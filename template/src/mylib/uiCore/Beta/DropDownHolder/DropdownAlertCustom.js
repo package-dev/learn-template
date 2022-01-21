@@ -1,14 +1,12 @@
-import {DropDownHolder} from '@utils'
+import {DropDownHolder} from './index'
 import React from 'react'
 import DropdownAlert from 'react-native-dropdownalert'
-import {COLOR, ICON} from '../res'
-const time_drop=1000
+const time_drop = 1000
 export default function DropdownAlertCustom ({...rest}) {
   return (
     <DropdownAlert
       ref={ref => DropDownHolder.setDropDown(ref)}
-      inactiveStatusBarBackgroundColor={COLOR.green1}
-
+      inactiveStatusBarBackgroundColor={'green'}
       // updateStatusBar={false}
 
       infoColor={'#719AE6'}
@@ -24,8 +22,6 @@ export default function DropdownAlertCustom ({...rest}) {
       containerStyle={{backgroundColor: 'pink'}}
       closeInterval={time_drop}
       // showCancel={true}
-     
     />
   )
 }
-

@@ -3,8 +3,8 @@ import {NavigationContainer} from '@react-navigation/native'
 import {navigationRef, isReadyRef} from './rootNavigation'
 import SplashScreen from 'react-native-splash-screen'
 // import {useSelector} from 'react-redux'
-import Auth from '@module/auth'
-import App from '@module/app'
+import Auth from '@screen/auth'
+import App from '@screen/app'
 // import {log} from '@utils'
 export default function Navigation () {
   //   const {isSigned} = useSelector(state => state.GlobalAuth)
@@ -15,11 +15,7 @@ export default function Navigation () {
   }, [])
   return (
     <NavigationContainer ref={navigationRef} independent={true}>
-      {isSigned ? (
-        <App  />
-      ) : (
-        <Auth  />
-      )}
+      {isSigned ? <App /> : <Auth />}
       {/* <Auth/>
       <App /> */}
     </NavigationContainer>

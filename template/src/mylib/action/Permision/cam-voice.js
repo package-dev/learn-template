@@ -1,6 +1,4 @@
 import {AlertMessage} from '@component'
-import {COLOR} from '@res'
-import { log } from '@utils'
 import Permissions, {
   requestNotifications,
   check,
@@ -12,7 +10,7 @@ import Permissions, {
 
 export async function checkPermissionsCamera () {
   let response = await check(PERMISSIONS.ANDROID.CAMERA) // <-- always blocked
-  log(response)
+  console.log(response)
   if (response === RESULTS.BLOCKED) {
     AlertMessage.show({
       title: 'Thông báo',
@@ -26,10 +24,12 @@ export async function checkPermissionsCamera () {
         {
           name: 'Đồng ý',
 
-          color: COLOR.green1,
+          color: 'red',
           action: () =>
-            openSettings().catch(() => console.log('cannot open settings')),
-          color: COLOR.yesAlert,
+            openSettings().catch(() =>
+              console.console.log('cannot open settings'),
+            ),
+          color: 'red',
         },
       ],
     })
@@ -58,7 +58,7 @@ export async function checkPermissionsCamera () {
 }
 export async function checkPermissionsVoice () {
   let response = await check(PERMISSIONS.ANDROID.RECORD_AUDIO) // <-- always blocked
-  log(response)
+  console.log(response)
   if (response === RESULTS.BLOCKED) {
     AlertMessage.show({
       title: 'Thông báo',
@@ -72,10 +72,12 @@ export async function checkPermissionsVoice () {
         {
           name: 'Đồng ý',
 
-          color: COLOR.green1,
+          color: 'green',
           action: () =>
-            openSettings().catch(() => console.log('cannot open settings')),
-          color: COLOR.yesAlert,
+            openSettings().catch(() =>
+              console.console.log('cannot open settings'),
+            ),
+          color: 'green',
         },
       ],
     })

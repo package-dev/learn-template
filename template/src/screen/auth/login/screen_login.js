@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   StyleSheet,
   Text,
@@ -10,20 +10,20 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
   StatusBar,
-} from 'react-native';
-import { Icon } from 'react-native-elements';
-import { navigate } from '@config/navigation';
-import { useNavigation } from '@react-navigation/native';
-export default function LoginScreen1() {
-  const navigation=useNavigation()
-    const handleLogin=()=>{
-      console.log('123')
-      navigation.navigate("screen_details")
-    }
+} from 'react-native'
+import {Icon} from 'react-native-elements'
+import {navigate} from '@navigation'
+import {useNavigation} from '@react-navigation/native'
+export default function LoginScreen1 () {
+  const navigation = useNavigation()
+  const handleLogin = () => {
+    console.log('123')
+    // navigation.navigate("screen_details")
+  }
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <View style={styles.container}>
-          <StatusBar hidden={true}/>
+        <StatusBar hidden={true} />
         <View style={styles.bigCircle}></View>
         <View style={styles.smallCircle}></View>
         <View style={styles.centerizedView}>
@@ -61,19 +61,19 @@ export default function LoginScreen1() {
             <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
               <Text style={styles.loginButtonText}>Login</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={()=>navigate("screen_register")}>
+            <TouchableOpacity onPress={() => navigate('screen_register')}>
               <Text style={styles.registerText}>
                 Don't have an account? Register Now
               </Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={()=>navigate("screen_forgot")}>
+            <TouchableOpacity onPress={() => navigate('screen_forgot')}>
               <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
             </TouchableOpacity>
           </View>
         </View>
       </View>
     </TouchableWithoutFeedback>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -186,4 +186,4 @@ const styles = StyleSheet.create({
     marginTop: 12,
     fontSize: 16,
   },
-});
+})
