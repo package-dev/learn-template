@@ -1,0 +1,16 @@
+// {
+//   "compilerOptions": {
+//     "baseUrl": ".",
+//     "paths": {
+//       "@component": ["src/component"],
+//       "@redux": ["src/redux"],
+//       "@saga": ["src/saga"],
+//       "@screen": ["src/screen"],
+//       "@image": ["src/img"],
+//       "@api": ["src/api"],
+//       "@navigation": ["src/navigation"],
+//       "@utils": ["src/utils"],
+//       "@res": ["src/res"],
+//     }
+//   }
+// }

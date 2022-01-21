@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+
+      "@assets": ["./src/assets"],
+      "@config": ["./src/config"],
+      "@libLavie": ["./src/libLavie"],
+      "@module": ["./src/module"],
+      "@service": ["./src/service"],
+
+
+      "@service-api": ["./src/service/api"],
+      "@navigation": ["./src/config/navigation"],
+      "@utils": ["./src/config/utils"],
+      "@images": ["./src/assets/images"],
+      "@module-redux": ["./src/module/redux"],
+      "@module-saga": ["./src/module/saga"],
+
+      "@libLavie/component": ["./src/libLavie/component"],
+
+      // "@lib-rn-uicore": ["./src/lib/rn-uicore"],
+      // "@lib-rn-action": ["./src/lib/rn-action"],
+      // "@lib-rn-uipattern": ["./src/lib/rn-uipattern"],
+      // "@lib-rn-utils": ["./src/lib/rn-utils"],
+    }
+  }
+}
