@@ -170,7 +170,12 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
-
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def formattedDate = new Date().format('HHmmss_DDMMYY')
+            outputFileName = "ProjectName-${variant.name}-v${variant.versionName}-v${defaultConfig.versionCode}-time_${formattedDate}.apk"
+        }
+    }
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
         variant.outputs.each { output ->

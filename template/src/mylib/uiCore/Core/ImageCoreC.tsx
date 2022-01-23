@@ -1,25 +1,21 @@
 import React from 'react'
 import {
-  TextStyle,
-  ViewStyle,
-  TextProps,
-  ColorValue,
   ImageProps,
   ImageStyle,
   ImageSourcePropType,
   ImageResizeMode,
   StyleProp,
 } from 'react-native'
-import {StyleSheet, Text, View, Image} from 'react-native'
-import {rnColor} from './res/color'
+import {Image} from 'react-native'
+import {URL_NOIMAGE} from './res/uriNoImage'
 interface Props {
-  source?: ImageSourcePropType|any
+  source?: ImageSourcePropType | any
   width?: string | number | undefined
   height?: string | number
   resizeMode?: ImageResizeMode | undefined
-  style?:  StyleProp<ImageStyle>
+  style?: StyleProp<ImageStyle>
 }
-const ImageCoreC: React.FC<Props|ImageProps> = props => {
+const ImageCoreC: React.FC<Props | ImageProps> = props => {
   const styleProps: Array<any> = [
     {
       width: props.width ? props.width : 100,
@@ -32,7 +28,7 @@ const ImageCoreC: React.FC<Props|ImageProps> = props => {
         props.source
           ? props.source
           : {
-              uri: defaultLink,
+              uri: URL_NOIMAGE,
             }
       }
       style={[styleProps, {...props}, props.style]}
@@ -42,5 +38,3 @@ const ImageCoreC: React.FC<Props|ImageProps> = props => {
 }
 
 export default ImageCoreC
-const defaultLink =
-  'https://vcdn-dulich.vnecdn.net/2020/09/04/1-Meo-chup-anh-dep-khi-di-bien-9310-1599219010.jpg'

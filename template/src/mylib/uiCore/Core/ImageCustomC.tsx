@@ -10,20 +10,21 @@ import {
   StyleProp,
   ViewStyle,
 } from 'react-native'
+import {URL_NOIMAGE} from './res/uriNoImage'
 
-interface Props extends ViewStyle{
+interface Props extends ViewStyle {
   source?: ImageSourcePropType | any
   width?: string | number | undefined
   height?: string | number
   resizeMode?: ImageResizeMode | undefined
   style?: StyleProp<ImageStyle>
 }
-const ImageCustom: React.FC<Props | ImageProps> = props => {
+const ImageCustomC: React.FC<Props | ImageProps> = props => {
   const {source, width, height, resizeMode = 'contain', style, ...rest} = props
   if (!source || source === null || source === undefined) return null
   const [load, setLoad] = useState(true)
   const [isErr, setIsErr] = useState(false)
-  const refImg:any = useRef()
+  const refImg: any = useRef()
   const _onLoadStart = () => {
     setLoad(true)
     refImg.current = setTimeout(() => {
@@ -40,9 +41,9 @@ const ImageCustom: React.FC<Props | ImageProps> = props => {
     }
   }, [])
   return (
-    <ViewCoreC midle >
+    <ViewCoreC midle>
       <Image
-        source={isErr ? require('./noimage.jpg') : source}
+        source={isErr ? {uri: URL_NOIMAGE} : source}
         style={[{width: width, height: height, resizeMode: resizeMode}, style]}
         {...rest}
         onLoadStart={_onLoadStart}
@@ -59,8 +60,8 @@ const ImageCustom: React.FC<Props | ImageProps> = props => {
     </ViewCoreC>
   )
 }
-
-ImageCustom.defaultProps = {
+export default ImageCustomC
+ImageCustomC.defaultProps = {
   source: null,
   width: 100,
   height: 100,

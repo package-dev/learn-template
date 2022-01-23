@@ -23,7 +23,7 @@ export default function LoginScreen1 () {
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <View style={styles.container}>
-        <StatusBar hidden={true} />
+        <StatusBar backgroundColor='#fff' barStyle='dark-content' />
         <View style={styles.bigCircle}></View>
         <View style={styles.smallCircle}></View>
         <View style={styles.centerizedView}>
