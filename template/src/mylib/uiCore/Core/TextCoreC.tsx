@@ -1,13 +1,13 @@
 import React from 'react'
-import {TextStyle, ViewStyle, TextProps, ColorValue} from 'react-native'
+import {TextStyle, ViewStyle, TextProps, StyleProp} from 'react-native'
 import {StyleSheet, Text, View} from 'react-native'
 import {rnColor} from './res/color'
-interface Props extends TextProps, ViewStyle  {
+interface Props extends TextProps, ViewStyle {
   children?: React.ReactNode
-  style?: TextStyle
+  style?: StyleProp<ViewStyle>
   colorReference?: rnColor
   backgroundColor?: rnColor | string
-  color?: string | rnColor | ColorValue
+  color?: string | rnColor
   UPPER?: boolean
   lower?: boolean
   bold?: boolean | number

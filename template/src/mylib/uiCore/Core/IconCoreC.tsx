@@ -101,7 +101,8 @@ export default class IconCoreC extends React.PureComponent<
       // this.props.bottom && {bottom: this.props.bottom, },
     ]
     // const {...rest}: any = this.props
-    const IconView = IconCoreC.Type[this.props.type]
+    const IconView =
+      IconCoreC.Type[this.props.type ? this.props.type : 'Ionicons']
     return (
       <IconView
         size={this.props.size}

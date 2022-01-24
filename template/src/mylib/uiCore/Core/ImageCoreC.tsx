@@ -1,12 +1,16 @@
 import React from 'react'
 import {
+  TextStyle,
+  ViewStyle,
+  TextProps,
+  ColorValue,
   ImageProps,
   ImageStyle,
   ImageSourcePropType,
   ImageResizeMode,
   StyleProp,
 } from 'react-native'
-import {Image} from 'react-native'
+import {StyleSheet, Text, View, Image} from 'react-native'
 import {URL_NOIMAGE} from './res/uriNoImage'
 interface Props {
   source?: ImageSourcePropType | any
@@ -14,6 +18,7 @@ interface Props {
   height?: string | number
   resizeMode?: ImageResizeMode | undefined
   style?: StyleProp<ImageStyle>
+  square?: number
 }
 const ImageCoreC: React.FC<Props | ImageProps> = props => {
   const styleProps: Array<any> = [
@@ -21,6 +26,7 @@ const ImageCoreC: React.FC<Props | ImageProps> = props => {
       width: props.width ? props.width : 100,
       height: props.height ? props.height : 100,
     },
+    props.square && {width: props.square, height: props.square},
   ]
   return (
     <Image

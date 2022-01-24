@@ -7,9 +7,9 @@ import {
   TouchableNativeFeedbackProps,
   TabBarIOSItemProps,
   ColorValue,
-  StyleProp
-} from 'react-native';
-import {StyleSheet, Text, View,} from 'react-native'
+  StyleProp,
+} from 'react-native'
+import {StyleSheet, Text, View} from 'react-native'
 import {rnColor} from './res/color'
 interface PropsViewCore extends ViewStyle {
   children?: React.ReactNode
@@ -49,9 +49,9 @@ const ViewCoreC: React.FC<PropsViewCore> = props => {
 
 export default ViewCoreC
 /***
- * 
- * 
- * 
+ *
+ *
+ *
  * PropsWithChildren<Props>
  * PropsWithChildren<Props>)
  */

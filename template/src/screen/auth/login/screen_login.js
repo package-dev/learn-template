@@ -13,12 +13,10 @@ import {
 } from 'react-native'
 import {Icon} from 'react-native-elements'
 import {navigate} from '@navigation'
-import {useNavigation} from '@react-navigation/native'
+import {loginSuccess} from '@config/redux/action'
 export default function LoginScreen1 () {
-  const navigation = useNavigation()
   const handleLogin = () => {
-    console.log('123')
-    // navigation.navigate("screen_details")
+    loginSuccess()
   }
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>

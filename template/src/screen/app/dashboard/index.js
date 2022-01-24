@@ -1,6 +1,8 @@
 /**import screens in module */
 import screen_dashboard from './screen_dashboard'
-/**export type object module */
+import BottomHome from './BottomHome'
+import Drawer from './Drawer'
 module.exports = {
-  screen_dashboard,
+  BottomHome,
+  // screen_dashboard,
 }

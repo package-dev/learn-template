@@ -3,21 +3,23 @@ import {
   GestureResponderEvent,
   Insets,
   NativeSyntheticEvent,
+  StyleProp,
   StyleSheet,
   TargetedEvent,
   Text,
   TouchableOpacity,
+  TouchableWithoutFeedbackProps,
   ViewStyle,
 } from 'react-native'
 import {rnColor} from './res/color'
-interface PropsViewCore extends ViewStyle {
+interface PropsViewCore extends TouchableWithoutFeedbackProps {
   children?: React.ReactNode
   width?: number | string
   height?: number | string
   square?: number
   midle?: boolean
   row?: boolean
-  style?: ViewStyle
+  style?: StyleProp<ViewStyle>
   flex1?: boolean
   centerHorizontal?: boolean
   backgroundColorReference?: rnColor
@@ -64,7 +66,7 @@ const TouchableCoreC: React.FC<PropsViewCore> = props => {
       delayPressOut={props.delayPressOut}
       hitSlop={props.hitSlop}
       activeOpacity={props.activeOpacity}
-      style={[styleProps, {...props}, props.style]}>
+      style={[styleProps, props.style]}>
       {props.children}
     </TouchableOpacity>
   )
