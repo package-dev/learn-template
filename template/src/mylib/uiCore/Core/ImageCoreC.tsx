@@ -11,7 +11,7 @@ import {
   StyleProp,
 } from 'react-native'
 import {StyleSheet, Text, View, Image} from 'react-native'
-import {URL_NOIMAGE} from './res/uriNoImage'
+import {rnColor} from './res/color'
 interface Props {
   source?: ImageSourcePropType | any
   width?: string | number | undefined
@@ -34,7 +34,7 @@ const ImageCoreC: React.FC<Props | ImageProps> = props => {
         props.source
           ? props.source
           : {
-              uri: URL_NOIMAGE,
+              uri: defaultLink,
             }
       }
       style={[styleProps, {...props}, props.style]}
@@ -44,3 +44,5 @@ const ImageCoreC: React.FC<Props | ImageProps> = props => {
 }
 
 export default ImageCoreC
+const defaultLink =
+  'https://vcdn-dulich.vnecdn.net/2020/09/04/1-Meo-chup-anh-dep-khi-di-bien-9310-1599219010.jpg'

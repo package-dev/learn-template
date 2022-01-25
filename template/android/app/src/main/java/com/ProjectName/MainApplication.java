@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
+import com.thronie.intent.OpenIntentPackage;
 import com.reactnativecommunity.webview.RNCWebViewPackage;
 import com.rnfs.RNFSPackage;
 import com.imagepicker.ImagePickerPackage;

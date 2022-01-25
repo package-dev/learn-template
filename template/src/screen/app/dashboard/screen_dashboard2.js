@@ -1,14 +1,24 @@
-import {StyleSheet, Text, View, Button} from 'react-native'
+import {Linking, Button, View, StatusBar} from 'react-native'
 import React from 'react'
-import {navigate} from '@navigation'
-
+import OpenApplication from 'react-native-open-application'
+// com.android.providers.telephony
 export default function screen_dashboard () {
+  const openApp = () => {
+    // OpenApplication.openApplication('com.android.providers.telephony')
+    Linking.openURL(
+      'https://play.google.com/store/apps/details?id=com.manoj.dlt',
+    )
+  }
   return (
-    <View>
-      <Text></Text>
-      <Button title='sa' onPress={() => navigate('insta_home')} />
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: '#fff',
+        justifyContent: 'space-between',
+        padding: 20,
+      }}>
+      <StatusBar backgroundColor='#fff' barStyle='dark-content' />
+      <Button title='open' onPress={openApp} />
     </View>
   )
 }
-
-const styles = StyleSheet.create({})

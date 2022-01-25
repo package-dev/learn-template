@@ -1,7 +1,7 @@
 /**import screens in module */
 import screen_dashboard from './screen_dashboard'
 import BottomHome from './BottomHome'
-import Drawer from './Drawer'
+// import Drawer from './Drawer'
 module.exports = {
   BottomHome,
   // screen_dashboard,

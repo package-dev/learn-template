@@ -3,11 +3,10 @@ import {createDrawerNavigator} from '@react-navigation/drawer'
 const {Navigator, Screen} = createDrawerNavigator()
 
 // import BottomHome from './BottomHome'
-// import DrawerContent from './DrawerContent'
+import DrawerContent from './DrawerContent'
 import {Dimensions, View} from 'react-native'
 
 export default function Drawer () {
-  return null
   return (
     <Navigator
       screenOptions={{

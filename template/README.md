@@ -4,7 +4,7 @@ npm start --reset-cache
 
 git add . && git commit -m "" && git push
 
-sudo chmod -R /user/path
+sudo chmod -R 777 android
 
 sudo ./gradlew cleanBuildCache
 

@@ -192,8 +192,8 @@ export default function InstagramClone ({navigation}) {
                 </TouchableOpacity>
                 <Text style={styles.storyUsernameText}>Your Story</Text>
               </View>
-              {stories.map(user => (
-                <View style={styles.storyHolder}>
+              {stories.map((user, index) => (
+                <View key={index} style={styles.storyHolder}>
                   <Image
                     style={[
                       styles.storyUserImage,
@@ -293,8 +293,9 @@ export default function InstagramClone ({navigation}) {
                 horizontal
                 showsHorizontalScrollIndicator={false}
                 style={{marginTop: 10}}>
-                {suggestedUsers.map(user => (
+                {suggestedUsers.map((user, index) => (
                   <View
+                    key={index}
                     style={{
                       backgroundColor: '#fff',
                       paddingVertical: 4,
@@ -353,8 +354,8 @@ export default function InstagramClone ({navigation}) {
                 <View style={{width: 30}}></View>
               </ScrollView>
             </View>
-            {posts.map(post => (
-              <View style={[styles.post, {marginTop: 10}]}>
+            {posts.map((post, index) => (
+              <View key={index} style={[styles.post, {marginTop: 10}]}>
                 <View style={styles.postHeader}>
                   <Image
                     style={styles.postUserImage}

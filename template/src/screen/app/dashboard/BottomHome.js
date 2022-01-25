@@ -5,7 +5,7 @@ const Tab = createBottomTabNavigator()
 import screen_dashboard from './screen_dashboard'
 import screen_dashboard2 from './screen_dashboard2'
 const COLOR = {
-  icon_open: 'red',
+  icon_open: '#525151',
   icon_close: 'gray',
 }
 export default function BottomHome () {
@@ -23,7 +23,6 @@ export default function BottomHome () {
                 color={focused ? COLOR.icon_open : COLOR.icon_close}
               />
             )
-
           return (
             <IconCoreC
               name={route.params.icon}
@@ -48,9 +47,9 @@ export default function BottomHome () {
         tabBarBadgeStyle: {},
       })}>
       <Tab.Screen
-        name='screen_dashboard'
+        name='Home'
         component={screen_dashboard}
-        initialParams={{icon: 'calendar-outline', name: 'Nhật ký'}}
+        initialParams={{icon: 'home-outline', name: 'Home'}}
         // options={{
         //   tabBarLabel: 'Nhật ký',
         //   tabBarIcon: ({color, size}) => (
@@ -64,9 +63,9 @@ export default function BottomHome () {
         // }}
       />
       <Tab.Screen
-        name='screen_dashboard2'
+        name='Facebook'
         component={screen_dashboard2}
-        initialParams={{icon: 'receipt', name: 'Báo cáo'}}
+        initialParams={{icon: 'logo-facebook', name: 'Facebook'}}
         // options={{
         //   tabBarLabel: 'Báo cáo',
         //   tabBarIcon: ({color, size}) => (
