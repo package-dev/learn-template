@@ -7,7 +7,7 @@ export default function screen_chat1 () {
   useEffect(() => {
     let clear = setTimeout(() => {
       replace('screen_chat2')
-    }, 100)
+    }, 500)
     return () => {
       clearTimeout(clear)
     }

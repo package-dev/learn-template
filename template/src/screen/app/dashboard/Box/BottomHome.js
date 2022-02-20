@@ -2,8 +2,8 @@ import React from 'react'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import {IconCoreC} from '@mylib'
 const Tab = createBottomTabNavigator()
-import screen_dashboard from './screen_dashboard'
-import screen_dashboard2 from './screen_dashboard2'
+import screen_dashboard from '../screen_dashboard'
+import screen_dashboard2 from '../screen_dashboard2'
 const COLOR = {
   icon_open: '#525151',
   icon_close: 'gray',
