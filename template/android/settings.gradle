@@ -1,6 +1,4 @@
 rootProject.name = 'ProjectName'
-include ':react-native-open-intent'
-project(':react-native-open-intent').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-open-intent/android')
 include ':react-native-webview'
 project(':react-native-webview').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-webview/android')
 include ':react-native-fs'

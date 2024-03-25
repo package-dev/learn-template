@@ -1,30 +1,28 @@
 import React from 'react'
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
-import {IconCoreC} from '@mylib'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 const Tab = createBottomTabNavigator()
-import screen_dashboard from '../screen_dashboard'
-import screen_dashboard2 from '../screen_dashboard2'
+import Ionicons from 'react-native-vector-icons/Ionicons'
 const COLOR = {
   icon_open: '#525151',
   icon_close: 'gray',
 }
-export default function BottomHome () {
+export default function BottomHome() {
   return (
     <Tab.Navigator
       initialRouteName='screen_dashboard'
-      screenOptions={({route}) => ({
+      screenOptions={({ route }) => ({
         headerShown: false,
-        tabBarIcon: ({focused}) => {
+        tabBarIcon: ({ focused }) => {
           if (focused)
             return (
-              <IconCoreC
+              <Ionicons
                 name={route.params.icon}
                 size={25}
                 color={focused ? COLOR.icon_open : COLOR.icon_close}
               />
             )
           return (
-            <IconCoreC
+            <Ionicons
               name={route.params.icon}
               size={25}
               color={focused ? COLOR.icon_open : COLOR.icon_close}
@@ -46,38 +44,7 @@ export default function BottomHome () {
         },
         tabBarBadgeStyle: {},
       })}>
-      <Tab.Screen
-        name='Home'
-        component={screen_dashboard}
-        initialParams={{icon: 'home-outline', name: 'Home'}}
-        // options={{
-        //   tabBarLabel: 'Nhật ký',
-        //   tabBarIcon: ({color, size}) => (
-        //     <IconCoreC
-        //       type='Octicons'
-        //       name='calendar'
-        //       color={color}
-        //       size={25}
-        //     />
-        //   ),
-        // }}
-      />
-      <Tab.Screen
-        name='Facebook'
-        component={screen_dashboard2}
-        initialParams={{icon: 'logo-facebook', name: 'Facebook'}}
-        // options={{
-        //   tabBarLabel: 'Báo cáo',
-        //   tabBarIcon: ({color, size}) => (
-        //     <IconCoreC
-        //       type='FontAwesome5'
-        //       name='receipt'
-        //       color={color}
-        //       size={25}
-        //     />
-        //   ),
-        // }}
-      />
+
     </Tab.Navigator>
   )
 }

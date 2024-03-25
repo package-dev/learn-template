@@ -11,10 +11,10 @@ import {
   Keyboard,
   StatusBar,
 } from 'react-native'
-import {Icon} from 'react-native-elements'
-import {navigate} from '@navigation'
-import {loginSuccess} from '@config/redux/action'
-export default function LoginScreen1 () {
+import { Icon } from 'react-native-elements'
+import { navigate } from '@navigation'
+import { loginSuccess } from '@config/redux/action'
+export default function LoginScreen1() {
   const handleLogin = () => {
     loginSuccess()
   }

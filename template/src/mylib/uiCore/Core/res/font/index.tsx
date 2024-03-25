@@ -1,6 +1,0 @@
-export * from './AntDesign'
-export * from './FontAwesome'
-export * from './FontAwesome5'
-export * from './Ionicons'
-export * from './MaterialCommunityIcons'
-export * from './MaterialIcons'

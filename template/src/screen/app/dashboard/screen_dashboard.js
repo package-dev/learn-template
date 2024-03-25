@@ -5,20 +5,16 @@ import {
   StatusBar,
   Image,
   FlatList,
-  Dimensions,
+  Text,
   Linking,
+  TouchableOpacity
 } from 'react-native'
-import React, {useEffect, useState} from 'react'
-import {navigate} from '@navigation'
-import {useNavigation} from '@react-navigation/native'
-import {ImageCoreC, ViewCoreC, TouchableCoreC, TextCoreC} from '@mylib'
-import {IMAGE} from '@assets/image'
-import OpenIntent from 'react-native-open-intent'
-import {maybeOpenURL} from '@utils/openLinkApp'
+import React, { useEffect, useState } from 'react'
+import { navigate } from '@navigation'
 
-export default function screen_dashboard () {
+export default function screen_dashboard() {
   return (
-    <View style={{flex: 1, backgroundColor: '#fff'}}>
+    <View style={{ flex: 1, backgroundColor: '#fff' }}>
       <IconApp onPress={() => navigate('screen_chat1')} name={'Messeger'} />
       <IconApp onPress={() => navigate('Loading')} name={'Loading'} />
       <IconApp
@@ -32,13 +28,13 @@ export default function screen_dashboard () {
     </View>
   )
 }
-const IconApp = ({name, onPress}) => {
+const IconApp = ({ name, onPress }) => {
   return (
-    <TouchableCoreC
+    <TouchableOpacity
       onPress={onPress}
-      style={{height: 40, backgroundColor: 'gray', marginVertical: 2}}
-      midle>
-      <TextCoreC>{name}</TextCoreC>
-    </TouchableCoreC>
+      style={{ height: 40, backgroundColor: 'gray', marginVertical: 2, alignItems: 'center', justifyContent: 'center' }}
+    >
+      <Text>{name}</Text>
+    </TouchableOpacity>
   )
 }
