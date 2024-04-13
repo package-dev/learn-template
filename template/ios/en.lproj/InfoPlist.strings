@@ -1,0 +1,5 @@
+"NSCameraUsageDescription" = "Please provide camera permissions";
+"NSLocationWhenInUseUsageDescription" = "Please provide location";
+"NSMicrophoneUsageDescription" = "Please provide microphone permissions";
+"NSPhotoLibraryAddUsageDescription" = "Please provide write permission to photo library";
+"NSPhotoLibraryUsageDescription" = "Please provide photo library permissions";

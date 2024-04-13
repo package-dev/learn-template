@@ -1,8 +1,19 @@
 {
   "name": "learn-template",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "repository": "https://github.com/phamha98/learn-template",
   "description": "React Native Base Template",
   "author": "Phamha98",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "template",
+    "phamha98",
+    "learn-template",
+    "react-native-learn-template",
+    "react-native",
+    "react",
+    "native",
+    "example",
+    "demo"
+  ]
 }

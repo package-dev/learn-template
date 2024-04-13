@@ -1,32 +1,45 @@
 {
-    "compilerOptions": {
-      "allowJs": true,
-      "allowSyntheticDefaultImports": true,
-      "esModuleInterop": true,
-      "isolatedModules": true,
-      "jsx": "react-native",
-      "lib": ["es2020","dom"],
-      "moduleResolution": "node",
-      "noEmit": true,
-      "strict": true,
-      "target": "esnext",
-      "paths": {
-        "@assets": ["./src/assets"],
-        "@config": ["./src/config"],
-        "@mylib": ["./src/mylib"],
-        "@screen": ["./src/screen"],
-        "@service": ["./src/service"],
-        "@navigation": ["./src/navigation"],
-        "@utils": ["./src/utils"],
-  
-  
-        
-      },
-    },
-    "exclude": [
-      "node_modules",
-      "babel.config.js",
-      "metro.config.js",
-      "jest.config.js"
-    ]
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    // "files": ["globals.d.ts"],
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "react-native",
+    "lib": ["es2020", "dom"],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "strict": true,
+    "target": "esnext",
+    "baseUrl": "./",
+    "module": "commonjs",
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@assets/*": ["./src/assets/*"],
+      "@api/*": ["./src/api/*"],
+      "@screens/*": ["./src/screens/*"],
+      "@services/*": ["./src/services/*"],
+      "@navigation/*": ["./src/navigation/*"],
+      "@stores/*": ["./src/stores/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@components/*": ["./src/components/*"],
+      "@assets": ["./src/assets"],
+      "@screens": ["./src/screens"],
+      "@services": ["./src/services"],
+      "@navigation": ["./src/navigation"],
+      "@stores": ["./src/stores"],
+      "@utils": ["./src/utils"],
+      "@components": ["./src/components"]
+    }
+  },
+  "files": ["globals.d.ts"],
+  "include": ["./src/**/*.tsx", "./src/**/*.ts", "*.ts", "*.tsx"],
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
+  ]
 }

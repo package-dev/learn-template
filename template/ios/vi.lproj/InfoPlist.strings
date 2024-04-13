@@ -1,0 +1,5 @@
+"NSCameraUsageDescription" = "Vui lòng cung cấp quyền camera";
+"NSLocationWhenInUseUsageDescription" = "Vui lòng cung cấp vị trí";
+"NSMicrophoneUsageDescription" = "Vui lòng cung cấp quyền microphone";
+"NSPhotoLibraryAddUsageDescription" = "Vui lòng cung cấp quyền ghi vào thư viện ảnh";
+"NSPhotoLibraryUsageDescription" = "Vui lòng cung cấp quyền thư viện ảnh";

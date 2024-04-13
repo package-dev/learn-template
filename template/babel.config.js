@@ -6,12 +6,14 @@ const MODULE_RESOLVER = [
     root: [path.resolve('./')],
     alias: {
       '@assets': './src/assets',
-      '@config': './src/config',
-      '@mylib': './src/mylib',
-      '@screen': './src/screen',
-      '@service': './src/service',
+      '@api': './src/api',
+      '@screens': './src/screens',
+      '@services': './src/services',
       '@navigation': './src/navigation',
       '@utils': './src/utils',
+      '@stores': './src/stores',
+      '@components': './src/components',
+
     },
   },
 ]
@@ -24,15 +26,13 @@ const WILDCARD = [
 ]
 
 module.exports = {
-  // plugins: [MODULE_RESOLVER, WILDCARD],
   presets: ['module:metro-react-native-babel-preset'],
   overrides: [
     {
       exclude: /node_modules/,
-      plugins: [MODULE_RESOLVER, WILDCARD],
+      plugins: [MODULE_RESOLVER, WILDCARD,
+        'react-native-reanimated/plugin'
+      ],
     },
   ],
 }
-// module.exports = {
-//   presets: ['module:metro-react-native-babel-preset'],
-// };
